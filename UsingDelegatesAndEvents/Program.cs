@@ -50,7 +50,7 @@
                 .AddRule(r => string.IsNullOrWhiteSpace(person.Name) ? "Name cannot be empty." : string.Empty)
                 //.AddRule(r => person.Name!.Length < 5 ? "Name length must have at least 5 digits." : string.Empty) // This one will throw a NullReferenceException if person.Name is null.
                 .AddRule(r => person.Name?.Length < 5 ? "Name length must have at least 5 digits." : string.Empty)
-                .AddRule(r => !person.Email.Contains("@") ? "Email must contain an '@' symbol." : string.Empty)
+                .AddRule(r => !person.Email.Contains('@') ? "Email must contain an '@' symbol." : string.Empty)
                 .AddRule(r => person.Age < 18 ? "Person must be at least 18 years old." : string.Empty);
 
             // Validate the person and display errors if any
